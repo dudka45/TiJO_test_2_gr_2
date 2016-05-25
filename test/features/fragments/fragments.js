@@ -27,10 +27,10 @@ var fragments = function (text)
     'use strict';
 
     var mapping = {
-        goodNewsText: element,
-        abcLabel: element,
-        cdeLabel: element,
-        input: element
+        goodNewsText: element.bind(null, by.id('a')),
+        abcLabel: element.bind(null, by.id('b')),
+        cdeLabel: element.bind(null, by.id('c')),
+        input: element.bind(null, by.id('d'))
     };
 
     return byString(mapping, text);
